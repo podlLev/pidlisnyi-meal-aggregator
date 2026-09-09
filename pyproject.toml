@@ -1,0 +1,20 @@
+[project]
+name = "meal-aggregator"
+version = "0.1.0"
+description = "Агрегатор рецептів: відкриті API, аналіз інгредієнтів та часу приготування"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["ruff", "pytest", "pre-commit"]
+
+[project.scripts]
+meal-aggregator = "meal_aggregator.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
